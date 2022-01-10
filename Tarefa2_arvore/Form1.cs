@@ -36,29 +36,31 @@ namespace Tarefa2_arvore
             List<int> nosEsquerda = new List<int>();
             List<int> nosDireita = new List<int>();
 
-            //try
-           // {
+            try
+            {
                 raiz = numeros.Max();
                 indiceRaiz = numeros.IndexOf(raiz);
 
 
                 nosEsquerda.AddRange(numeros.GetRange(0, indiceRaiz).OrderByDescending(c => c));
-                nosDireita.AddRange(numeros.GetRange(indiceRaiz+1, numeros.Count- indiceRaiz-1).OrderByDescending(c => c));
+                nosDireita.AddRange(numeros.GetRange(indiceRaiz + 1, numeros.Count - indiceRaiz - 1).OrderByDescending(c => c));
 
 
                 txtRaiz.Text = raiz.ToString();
                 txtNosEsquerda.Text = string.Join(",", nosEsquerda);
                 txtNosDireita.Text = string.Join(",", nosDireita);
 
-            //}
-            //catch (Exception)
-            //{
+            }
+            catch (Exception)
+            {
 
-            //    throw;
-            //}
+                throw;
+            }
 
 
-            
-        }
+
+
+
+}
     }
 }
